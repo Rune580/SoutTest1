@@ -1,5 +1,6 @@
 package yes.scouttest1;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,10 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.RadioButton;
+import android.widget.ToggleButton;
 
 public class ScoutHome extends AppCompatActivity {
 
-    String botTypeSelected ="Defence";
+    private String botTypeSelected ="Defence";
+    private String frameType="Custom";
+    public ToggleButton KOPFrameButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,7 @@ public class ScoutHome extends AppCompatActivity {
         setContentView(R.layout.activity_scout_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        KOPFrameButton = (ToggleButton) findViewById(R.id.DefualtFrame);
     }
 
     @Override
@@ -44,10 +49,20 @@ public class ScoutHome extends AppCompatActivity {
 
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
+
+            DialogFragment SaveExitConfirm = new SaveAndExitDialog();
+            SaveExitConfirm.show(getFragmentManager(), "saveandexitconfirmation");
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onToggleKOPFrame(View view) {
+        if (KOPFrameButton.isChecked())
+            frameType="KOP";
+        else
+            frameType="Custom";
     }
 
     public void onBotTypeSelection(View view) {
@@ -77,10 +92,18 @@ public class ScoutHome extends AppCompatActivity {
 
     public void saveAndNext(View view) {
         Context context = getApplicationContext();
-        String text = botTypeSelected + " Type, Save & Next code here";
+        String text = frameType + " Bot, " + botTypeSelected + " Type, Save & Next code here";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    public void toasting(String message) {
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, message, duration);
         toast.show();
     }
 }

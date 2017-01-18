@@ -9,4 +9,8 @@
     <string name="robot_type_radio_neither" translatable="false">Defence</string>
     <string name="kop_frame" translatable="false">KOP Frame</string>
     <string name="save_and_next" translatable="false">Next</string>
+    <string name="u_sure" translatable="false">U Sure M8?</string>
+    <string name="no_plz" translatable="false">No Plz</string>
+    <string name="meh" translatable="false">Meh...</string>
+    <string name="yas" translatable="false">YAS!!</string>
 </resources>

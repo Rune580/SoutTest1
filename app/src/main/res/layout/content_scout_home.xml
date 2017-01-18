@@ -36,7 +36,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/BotType"
         android:layout_below="@+id/BotTypeText"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:checkedButton="@+id/DefenceType">
 
         <RadioButton
             android:text="@string/robot_type_radio_fuel"
@@ -81,7 +82,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="143dp"
         android:textOff="@string/kop_frame"
-        android:textOn="@string/kop_frame" />
+        android:textOn="@string/kop_frame"
+        android:checked="false"
+        android:onClick="onToggleKOPFrame"/>
 
     <Button
         android:text="@string/save_and_next"
