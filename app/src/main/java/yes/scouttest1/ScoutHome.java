@@ -8,8 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.RadioButton;
 
 public class ScoutHome extends AppCompatActivity {
+
+    String botTypeSelected ="Defence";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +50,34 @@ public class ScoutHome extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void onBotTypeSelection(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.FuelType:
+                if (checked)
+                    botTypeSelected ="Fuel";
+                    break;
+            case R.id.GearType:
+                if (checked)
+                    botTypeSelected ="Gears";
+                    break;
+            case R.id.BothType:
+                if (checked)
+                    botTypeSelected ="Fuel & Gears";
+                break;
+            case R.id.DefenceType:
+                if (checked)
+                    botTypeSelected ="Defence";
+                break;
+        }
+    }
+
     public void saveAndNext(View view) {
         Context context = getApplicationContext();
-        String text = "Save & Next code here";
+        String text = botTypeSelected + " Type, Save & Next code here";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);

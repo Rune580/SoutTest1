@@ -43,28 +43,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/FuelType"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onBotTypeSelection"/>
 
         <RadioButton
             android:text="@string/robot_type_radio_gear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/GearType"
-            android:layout_weight="1" />
-
-        <RadioButton
-            android:text="@string/robot_type_radio_neither"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/DefenceType"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onBotTypeSelection"/>
 
         <RadioButton
             android:text="@string/robot_type_radio_both"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/BothType"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="onBotTypeSelection"/>
+
+        <RadioButton
+            android:text="@string/robot_type_radio_neither"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DefenceType"
+            android:layout_weight="1"
+            android:onClick="onBotTypeSelection"/>
 
     </RadioGroup>
 
