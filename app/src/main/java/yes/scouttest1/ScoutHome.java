@@ -49,7 +49,7 @@ public class ScoutHome extends AppCompatActivity {
 
     public void saveAndNext(View view) {
         Context context = getApplicationContext();
-        CharSequence text = "Save & Next code here";
+        String text = "Save & Next code here";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
