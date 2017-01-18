@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">ScoutTest1</string>
-    <string name="action_change_active_team">Change Active Team</string>
-    <string name="action_save_exit">Save &amp; Exit</string>
+    <string name="app_name" translatable="false">ScoutTest1</string>
+    <string name="action_save_exit" translatable="false">Save &amp; Exit</string>
+    <string name="team_number_hint" translatable="false">Team #</string>
+    <string name="robot_type_radio_title" translatable="false">Bot Type</string>
+    <string name="robot_type_radio_fuel" translatable="false">Fuel</string>
+    <string name="robot_type_radio_gear" translatable="false">Gears</string>
+    <string name="robot_type_radio_both" translatable="false">Gears &amp; Fuel</string>
+    <string name="robot_type_radio_neither" translatable="false">Defence</string>
+    <string name="kop_frame" translatable="false">KOP Frame</string>
+    <string name="save_and_next" translatable="false">Next</string>
 </resources>

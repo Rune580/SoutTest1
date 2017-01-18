@@ -33,16 +33,6 @@ public class ScoutHome extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_change_active_team) {
-            Context context = getApplicationContext();
-            CharSequence text = "Change Active Team dialog here";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            return true;
-        }
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_save_exit) {
             Context context = getApplicationContext();
             CharSequence text = "Save & Exit code here";

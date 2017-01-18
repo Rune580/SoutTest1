@@ -1,12 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="yes.scouttest1.ScoutHome">
     <item android:id="@+id/action_save_exit"
         android:title="@string/action_save_exit" />
-    <item
-        android:id="@+id/action_change_active_team"
-        android:orderInCategory="100"
-        android:title="@string/action_change_active_team"
-        app:showAsAction="never" />
 </menu>
