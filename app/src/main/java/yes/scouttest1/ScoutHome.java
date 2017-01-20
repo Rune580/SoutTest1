@@ -43,12 +43,8 @@ public class ScoutHome extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_save_exit) {
-            Context context = getApplicationContext();
-            CharSequence text = "Save & Exit code here";
-            int duration = Toast.LENGTH_SHORT;
+            toasting("Save & Exit code here");
 
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
 
             DialogFragment SaveExitConfirm = new SaveAndExitDialog();
             SaveExitConfirm.show(getFragmentManager(), "saveandexitconfirmation");
@@ -91,12 +87,7 @@ public class ScoutHome extends AppCompatActivity {
     }
 
     public void saveAndNext(View view) {
-        Context context = getApplicationContext();
-        String text = frameType + " Bot, " + botTypeSelected + " Type, Save & Next code here";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+        toasting(frameType + " Bot, " + botTypeSelected + " Type, Save & Next code here");
     }
 
     public void toasting(String message) {
